@@ -156,9 +156,9 @@ var scores = JSON.parse(localStorage.getItem("scores"))||[];
 scores.push({Initials,score:timerCount})
 localStorage.setItem("scores",JSON.stringify(scores))
 
-// var initalsScore = document.querySelector(".initals-score")
-// initalsScore.innerHTML = ('');
-// initialsScores = localStorage.getItem("scores");
+var initalsScore = document.querySelector(".initals-score")
+initalsScore.innerHTML = ('');
+initialsScores = localStorage.getItem("scores");
 }
 
 
