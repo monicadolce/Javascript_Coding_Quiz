@@ -6,6 +6,7 @@ var chosenQuestions = "";
 var timer;
 var timerCount;
 var currentQuestion = 1;
+var isWin = false
 
 console.log(document.body.children);
 console.log(quizQuestions);
@@ -123,7 +124,7 @@ function startTimer() {
     timerElement.textContent = timerCount;
     if (timerCount >= 0) {
       // Tests if win condition is met
-      if (timerCount > 0) {
+      if (isWin && timerCount > 0) {
         // Clears interval and stops timer
         clearInterval(timer);
       }
