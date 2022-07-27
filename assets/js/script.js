@@ -137,12 +137,16 @@ function displayEndScreen() {
   clearInterval(timer);
   var input = document.createElement("input");
   var btn = document.createElement("button");
+  var btn2 = document.createElement("button");
   btn.addEventListener("click", storeInitials)
+  btn2.addEventListener("click", goBack);
   btn.textContent = "Save Initials";
+  btn2.textContent = "Go Back";
   input.classList.add("initials");
   var questionBox = document.querySelector(".card.question-box");
   questionBox.appendChild(input);
   questionBox.appendChild(btn);
+  questionBox.appendChild(btn2);
   
   var scores = JSON.parse(localStorage.getItem("scores")) || [];
   var scoresText = "";
@@ -153,6 +157,9 @@ function displayEndScreen() {
   finalScoreEl.textContent = scoresText;
 }
 
+function goBack(params) {
+  
+}
 function storeInitials() {
   var Initials = document.querySelector(".initials").value
   console.log(Initials);
