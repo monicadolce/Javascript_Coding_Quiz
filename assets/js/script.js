@@ -5,8 +5,8 @@ var startButton = document.querySelector(".start-button");
 var chosenQuestions = "";
 var timer;
 var timerCount;
-var currentQuestion = 1;
-var isWin = false
+var currentQuestion = 0;
+// var isWin = false
 var finalScoreEl = document.getElementsByClassName("initals-score")[0];
 console.log(finalScoreEl.textContent);
 
@@ -15,7 +15,7 @@ console.log(quizQuestions);
 
 var questions = [
   {
-    qText: "Arrays in Javascript can be used to store __________.",
+    qText: "Arrays in Javascript can be used to store ______.",
     choices: [
       "1. numbers",
       "2. booleans",
@@ -67,7 +67,7 @@ var questions = [
       "4. console.log"
     ],
     aText: "4. console.log",
-  },
+  }
 
 ]
 
@@ -112,7 +112,7 @@ function checkAnswer(event) {
 function startQuiz() {
   timerCount = 50;
   // Prevents start button from being clicked when round is in progress
-  startButton.disabled = true;
+  // startButton.disabled = true;
   startTimer()
   renderQuestion()
 }
@@ -126,10 +126,10 @@ function startTimer() {
     timerElement.textContent = timerCount;
     if (timerCount >= 0) {
 
-      if (isWin && timerCount > 0) {
-        // Clears interval and stops timer
-        clearInterval(timer);
-      }
+      // if (isWin && timerCount > 0) {
+      //   // Clears interval and stops timer
+      //   clearInterval(timer);
+      // }
     }
     // Tests if time has run out
     if (timerCount === 0) {
