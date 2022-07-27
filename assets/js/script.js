@@ -124,13 +124,13 @@ function startTimer() {
   timer = setInterval(function () {
     timerCount--;
     timerElement.textContent = timerCount;
-    if (timerCount >= 0) {
+    // if (timerCount >= 0) {
 
-      // if (isWin && timerCount > 0) {
-      //   // Clears interval and stops timer
-      //   clearInterval(timer);
-      // }
-    }
+    //   // if (isWin && timerCount > 0) {
+    //   //   // Clears interval and stops timer
+    //   //   clearInterval(timer);
+    //   // }
+    // }
     // Tests if time has run out
     if (timerCount === 0) {
       // Clears interval
