@@ -101,7 +101,7 @@ function checkAnswer(event) {
     console.log("correct");
   } else {
     // deduct time from timer
-    timerCount = timerCount - 5
+    timerCount = timerCount -5
   }
   currentQuestion = currentQuestion + 1
   renderQuestion();
