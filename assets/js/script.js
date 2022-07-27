@@ -108,8 +108,8 @@ function checkAnswer(event) {
 }
 
 
-// The startGame function is called when the start button is clicked
-function startGame() {
+// The startQuiz function is called when the start button is clicked
+function startQuiz() {
   timerCount = 50;
   // Prevents start button from being clicked when round is in progress
   startButton.disabled = true;
@@ -125,7 +125,7 @@ function startTimer() {
     timerCount--;
     timerElement.textContent = timerCount;
     if (timerCount >= 0) {
-      // Tests if win condition is met
+
       if (isWin && timerCount > 0) {
         // Clears interval and stops timer
         clearInterval(timer);
@@ -168,7 +168,7 @@ function storeInitials() {
 
 }
 
-startButton.addEventListener("click", startGame);
+startButton.addEventListener("click", startQuiz);
 
 
 
