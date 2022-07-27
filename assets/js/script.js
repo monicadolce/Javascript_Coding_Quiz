@@ -6,7 +6,7 @@ var chosenQuestions = "";
 var timer;
 var timerCount;
 var currentQuestion = 0;
-// var isWin = false
+
 var finalScoreEl = document.getElementsByClassName("initals-score")[0];
 console.log(finalScoreEl.textContent);
 
@@ -124,13 +124,7 @@ function startTimer() {
   timer = setInterval(function () {
     timerCount--;
     timerElement.textContent = timerCount;
-    // if (timerCount >= 0) {
 
-    //   // if (isWin && timerCount > 0) {
-    //   //   // Clears interval and stops timer
-    //   //   clearInterval(timer);
-    //   // }
-    // }
     // Tests if time has run out
     if (timerCount === 0) {
       // Clears interval
