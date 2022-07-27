@@ -28,12 +28,12 @@ var questions = [
   {
     qText: "The condition in an if/else statement is enclosed within _____.",
     choices: [
-      "1. <h1>",
-      "2. <js>",
-      "3. <script>",
-      "4. <head>"
+      "1. quotes",
+      "2. curly brackets",
+      "3. parentheses",
+      "4. square brackets"
     ],
-    aText: "3. <script>",
+    aText: "3. parentheses",
   },
 
   {
@@ -101,7 +101,7 @@ function checkAnswer(event) {
     console.log("correct");
   } else {
     // deduct time from timer
-    timerCount = timerCount -5
+    timerCount = timerCount - 5
   }
   currentQuestion = currentQuestion + 1
   renderQuestion();
