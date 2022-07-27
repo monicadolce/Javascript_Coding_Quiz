@@ -111,8 +111,9 @@ function checkAnswer(event) {
 // The startQuiz function is called when the start button is clicked
 function startQuiz() {
   timerCount = 50;
+  timerElement.textContent = timerCount;
   // Prevents start button from being clicked when round is in progress
-  // startButton.disabled = true;
+  startButton.disabled = true;
   startTimer()
   renderQuestion()
 }
