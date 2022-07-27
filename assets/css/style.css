@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: Arial;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -20,9 +20,9 @@ body {
 
 
 button {
-  background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(241, 237, 11, 0.954) 100%);
+  background: rgb(177, 255, 60);
   border-radius: 8px;
-  color: #13293d;
+  color: grey;
   cursor: pointer;
   font-size: 1em;
   letter-spacing: 0.21px;
@@ -41,7 +41,6 @@ header {
   text-align: center;
   background: #c517d4;
   color: #fff;
-  border-bottom:30px #879274;
 }
 
 main {
@@ -61,6 +60,7 @@ section {
 .question-box {
   width: 55vw;
   height: 400px;
+  color: rgb(56, 52, 52);
 }
 
 .results {
@@ -69,7 +69,6 @@ section {
 }
 
 .card {
-  background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,124,33,0.604079131652661) 100%);
   border: 1px solid #eceff1;
   border-radius: 8px;
   box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
@@ -78,9 +77,14 @@ section {
   padding: 20px;
 }
 
+h3 {
+  color: rgb(56, 52, 52);
+}
+
 .large-font {
   font-size: 3.5em;
   text-align:center;
+  color: rgb(56, 52, 52);
 }
 
 .timer {
