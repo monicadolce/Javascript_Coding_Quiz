@@ -27,8 +27,8 @@ button {
   font-size: 1em;
   letter-spacing: 0.21px;
   line-height: 10px;
-  max-width: 255px;
-  padding: 20px 30px;
+  max-width: 200px;
+  padding: 15px 20px;
   text-align: center;
   transition-duration: 0.15s;
   transition-property: background-color;
