@@ -112,14 +112,14 @@ function checkAnswer(event) {
 function startQuiz() {
   timerCount = 50;
   timerElement.textContent = timerCount;
-  // Prevents start button from being clicked when round is in progress
+  // Prevents start button from being clicked when game is in progress
   startButton.disabled = true;
   startTimer()
   renderQuestion()
 }
 
 
-// The setTimer function starts and stops the timer and triggers winGame() and loseGame()
+// The setTimer function starts the timer
 function startTimer() {
   // Sets timer
   timer = setInterval(function () {
@@ -156,6 +156,9 @@ function displayEndScreen() {
     scoresText += "name: "+ score.Initials+ ", score: " + score.score + "\n";
   }
   finalScoreEl.textContent = scoresText;
+  document.querySelector(".timer-text").innerHTML = timerCount
+
+  
 }
 
 function goBack(params) {
