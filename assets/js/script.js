@@ -157,13 +157,14 @@ function displayEndScreen() {
   }
   finalScoreEl.textContent = scoresText;
   document.querySelector(".timer-text").innerHTML = "Your score is: " + timerCount
-
+  
+  function goBack() {
+    window.location.reload();
+  }
   
 }
 
-function goBack(params) {
-  
-}
+
 function storeInitials() {
   var Initials = document.querySelector(".initials").value
   console.log(Initials);
