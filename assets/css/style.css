@@ -97,6 +97,10 @@ h3 {
 
 .timer-text {
   padding: 55px;
+  font-size: large;
+  color:rgb(56, 52, 52);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
 }
 
 @media screen and (max-width: 1183px) {

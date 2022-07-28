@@ -153,10 +153,10 @@ function displayEndScreen() {
   var scoresText = "";
   for (let i  = 0; i < scores.length; i++) {
     const score = scores[i];
-    scoresText += "name: "+ score.Initials+ ", score: " + score.score + "\n";
+    scoresText += "Highscores " + "\n" + "name: "+ score.Initials+ ", score: " + score.score + "\n";
   }
   finalScoreEl.textContent = scoresText;
-  document.querySelector(".timer-text").innerHTML = timerCount
+  document.querySelector(".timer-text").innerHTML = "Your score is: " + timerCount
 
   
 }
