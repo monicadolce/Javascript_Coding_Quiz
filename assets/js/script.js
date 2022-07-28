@@ -1,18 +1,21 @@
+// Select DOM elements and assign variables
 var quizQuestions = document.querySelectorAll(".quiz-questions");
 var timerElement = document.querySelector(".timer-count");
 var startButton = document.querySelector(".start-button");
+var finalScoreEl = document.getElementsByClassName("initals-score")[0];
 
+// Declare variables
 var chosenQuestions = "";
 var timer;
 var timerCount;
 var currentQuestion = 0;
 
-var finalScoreEl = document.getElementsByClassName("initals-score")[0];
-console.log(finalScoreEl.textContent);
 
+console.log(finalScoreEl.textContent);
 console.log(document.body.children);
 console.log(quizQuestions);
 
+// Quiz questions, options and answers are stored in an array
 var questions = [
   {
     qText: "Arrays in Javascript can be used to store ______.",
@@ -71,6 +74,7 @@ var questions = [
 
 ]
 
+// renderQuestion fucntion displays the quiz questions in the DOM element card question-box
 function renderQuestion() {
   var questionBox = document.querySelector(".card.question-box");
   questionBox.innerHTML = ('');
@@ -91,7 +95,7 @@ function renderQuestion() {
   }
 
 }
-
+// checkAnswer function ensures answers are correct and incorrect; for incorrect answers, time is deducted 
 function checkAnswer(event) {
   console.log(event);
   var userChoice = event.target.innerText;
@@ -112,7 +116,7 @@ function checkAnswer(event) {
 function startQuiz() {
   timerCount = 50;
   timerElement.textContent = timerCount;
-  // Prevents start button from being clicked when game is in progress
+  // Prevents start button from being clicked when quiz is in progress
   startButton.disabled = true;
   startTimer()
   renderQuestion()
@@ -134,6 +138,8 @@ function startTimer() {
   }, 1000);
 }
 
+// displayEndScreen function displays the stored intials and score;
+// The function also regulates the save initials button and go back button;
 function displayEndScreen() {
   clearInterval(timer);
   var input = document.createElement("input");
@@ -148,23 +154,23 @@ function displayEndScreen() {
   questionBox.appendChild(input);
   questionBox.appendChild(btn);
   questionBox.appendChild(btn2);
-  
+
   var scores = JSON.parse(localStorage.getItem("scores")) || [];
   var scoresText = "";
-  for (let i  = 0; i < scores.length; i++) {
+  for (let i = 0; i < scores.length; i++) {
     const score = scores[i];
-    scoresText += "Highscores " + "\n" + "name: "+ score.Initials+ ", score: " + score.score + "\n";
+    scoresText += "Highscores " + "\n" + "name: " + score.Initials + ", score: " + score.score + "\n";
   }
   finalScoreEl.textContent = scoresText;
   document.querySelector(".timer-text").innerHTML = "Your score is: " + timerCount
-  
+
   function goBack() {
     window.location.reload();
   }
-  
+
 }
 
-
+// storeInitials function allows user to enter initials and store initials in local storage
 function storeInitials() {
   var Initials = document.querySelector(".initials").value
   console.log(Initials);
@@ -174,6 +180,7 @@ function storeInitials() {
 
 }
 
+// The start button initiates startQuiz function
 startButton.addEventListener("click", startQuiz);
 
 
